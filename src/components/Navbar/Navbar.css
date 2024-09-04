@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     width: 100%;
     padding: 20px 6%;
     display: flex;
@@ -10,52 +10,53 @@
     z-index: 1;
 }
 
-.navbar-left{
+.navbar-left {
     display: flex;
     align-items: center;
     gap: 50px;
 }
 
-.navbar-left img{
+.navbar-left img {
     width: 90px;
 }
 
-.navbar-left ul{
+.navbar-left ul {
     display: flex;
     list-style: none;
     gap: 20px;
 }
 
-.navbar-left ul li{
+.navbar-left ul li {
     cursor: pointer;
 }
 
-.navbar-right{
+.navbar-right {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.navbar-right .icons{
+.navbar-right .icons {
     width: 20px;
     cursor: pointer;
 }
 
-.navbar-right .profile{
+.navbar-right .profile {
     border-radius: 4px;
     width: 35px;
 }
 
-.navbar-profile{
+.navbar-profile {
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    position: relative; /* Ensure dropdown stays within profile container */
 }
 
-.navbar .dropdown{
+.navbar .dropdown {
     position: absolute;
-    top: 100%;
+    top: 100%; /* Position the dropdown below the profile section */
     right: 0;
     width: max-content;
     background: #191919;
@@ -63,18 +64,18 @@
     border-radius: 2px;
     text-decoration: underline;
     z-index: 1;
-    display: none;
+    display: none; /* Initially hidden */
 }
 
-.navbar .dropdown p{
+.navbar .dropdown.show {
+    display: block; /* Visible when JS adds the .show class */
+}
+
+.navbar .dropdown p {
     font-size: 13px;
     cursor: pointer;
 }
 
-.navbar-profile:hover .dropdown{
-    display: block;
-}
-
-.nav-dark{
+.nav-dark {
     background: #141414;
 }
